@@ -15,6 +15,14 @@ class PageResult(BaseModel, Generic[T]):
     size: int = 20
 
 
+class FlowerPageResult(PageResult[T], Generic[T]):
+    """花卉造景列表结果：附带去重、缺字段过滤口径，方便前端核对总数差异。"""
+
+    registered_total: int
+    available_total: int
+    quality: dict[str, Any] = Field(default_factory=dict)
+
+
 class ActionResult(BaseModel):
     ok: bool
     message: str
