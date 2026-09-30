@@ -13,7 +13,11 @@
         <span class="head-desc">面向城市园林绿化植物的栽植养护、修剪造型、病虫害防治、灌溉施肥与绿地巡查的一体化绿化管理后台。</span>
         <span class="head-user">当前值班：{{ store.operator }} · {{ store.shiftLabel }}</span>
       </header>
-      <RouterView />
+      <RouterView v-slot="{ Component }">
+        <KeepAlive :include="['FlowerList']">
+          <component :is="Component" />
+        </KeepAlive>
+      </RouterView>
     </main>
   </div>
 </template>

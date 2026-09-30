@@ -31,5 +31,54 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .btn.primary { background: var(--brand); border-color: var(--brand); color: #fff; }
 .btn.ghost { background: transparent; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
-.page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
+.page-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+
+/* —— 花卉造景：对账横幅、徽标、弹窗、分页 —— */
+.page-actions { display: flex; gap: 8px; }
+.recon-bar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--brand); border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; font-size: 13px; }
+.recon-main { display: flex; flex-wrap: wrap; gap: 18px; }
+.recon-main strong { font-size: 15px; margin-left: 4px; }
+.recon-current { color: #1f2937; }
+.recon-current strong { color: var(--brand); }
+.recon-links { display: flex; gap: 14px; align-items: center; }
+.warn-num { color: #b42318; font-weight: 600; }
+.rules-note { color: var(--muted); font-size: 12px; }
+.detail-panel { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 8px 26px; margin: 0 0 10px; font-size: 12.5px; color: #7c2d12; }
+.detail-panel.warn { background: #fef2f2; border-color: #fecaca; color: #7f1d1d; }
+.detail-panel li { margin: 3px 0; }
+.notice { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-radius: 8px; padding: 9px 14px; margin-bottom: 10px; font-size: 13px; }
+.notice.success { background: #ecfdf3; border: 1px solid #a6f4c5; color: #027a48; }
+.notice.warn { background: #fffaeb; border: 1px solid #fedf89; color: #b54708; }
+.notice.error { background: #fef3f2; border: 1px solid #fda29b; color: #b42318; }
+.badge { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 12px; white-space: nowrap; }
+.badge-overdue { background: #fef3f2; color: #b42318; border: 1px solid #fda29b; }
+.badge-urgent { background: #fffaeb; color: #b54708; border: 1px solid #fedf89; }
+.badge-tight { background: #fffaeb; color: #b54708; border: 1px solid #fec84b; }
+.badge-normal { background: #eff8ff; color: #175cd3; border: 1px solid #b2ddff; }
+.badge-loose { background: #f2f4f7; color: #475467; border: 1px solid #d0d5dd; }
+.tag { display: inline-block; background: #f2f4f7; border-radius: 4px; padding: 1px 8px; font-size: 12px; }
+tr.priority-overdue { background: #fef3f2; }
+tr.priority-urgent { background: #fffaeb; }
+.filter-item.grow { flex: 1; min-width: 220px; }
+.filter-item select, .filter-item input { width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; background: #fff; }
+.pager { display: flex; align-items: center; gap: 8px; }
+.pager .btn:disabled { opacity: .5; cursor: not-allowed; }
+.pager-info { font-size: 12.5px; color: #334155; }
+.modal-mask { position: fixed; inset: 0; background: rgba(16, 24, 40, .45); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.modal { background: #fff; border-radius: 10px; padding: 20px 24px; width: min(560px, 92vw); max-height: 86vh; overflow: auto; }
+.modal h3 { margin: 0 0 6px; font-size: 16px; }
+.rules-table { margin: 12px 0; }
+.rules-table input { width: 110px; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; margin-top: 12px; }
+.form-grid label span { display: block; font-size: 12px; color: var(--muted); margin-bottom: 3px; }
+.form-grid input { width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; }
+.detail-head { display: flex; align-items: center; gap: 12px; margin: 8px 0 12px; }
+.detail-head h3 { margin: 0; }
+.detail-table th { width: 180px; background: #f8fafc; color: var(--muted); font-weight: 500; }
+.detail-actions { display: flex; align-items: center; gap: 12px; margin-top: 14px; }
+.quick-panel { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin-top: 18px; }
+.quick-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.quick-head h3 { margin: 0; font-size: 15px; }
+.quick-foot { color: var(--muted); font-size: 12.5px; margin: 8px 0 0; }

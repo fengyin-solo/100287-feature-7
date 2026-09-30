@@ -6,6 +6,7 @@ const Tree = () => import('@/views/tree/index.vue')
 const Shrub = () => import('@/views/shrub/index.vue')
 const Lawn = () => import('@/views/lawn/index.vue')
 const Flower = () => import('@/views/flower/index.vue')
+const FlowerDetail = () => import('@/views/flower/detail.vue')
 const Pest = () => import('@/views/pest/index.vue')
 const Irrigation = () => import('@/views/irrigation/index.vue')
 const Fertilize = () => import('@/views/fertilize/index.vue')
@@ -31,6 +32,7 @@ const router = createRouter({
     { path: '/shrub', name: 'shrub', component: Shrub },
     { path: '/lawn', name: 'lawn', component: Lawn },
     { path: '/flower', name: 'flower', component: Flower },
+    { path: '/flower/:id', name: 'flower-detail', component: FlowerDetail },
     { path: '/pest', name: 'pest', component: Pest },
     { path: '/irrigation', name: 'irrigation', component: Irrigation },
     { path: '/fertilize', name: 'fertilize', component: Fertilize },

@@ -78,16 +78,16 @@ class LawnEntry(BaseModel):
     field_7: str | None = None  # 草坪状态
 
 class FlowerEntry(BaseModel):
-    """花卉造景明细结构。"""
+    """花卉造景明细结构（实际入参以 EntryPayload.values 里的中文字段为准）。"""
 
     field_0: str | None = None  # 造景编号
     field_1: str | None = None  # 造景主题
-    field_2: str | None = None  # 花卉品种
-    field_3: str | None = None  # 景观面积
-    field_4: str | None = None  # 花期起止
-    field_5: str | None = None  # 换花周期
-    field_6: str | None = None  # 养护人员
-    field_7: str | None = None  # 造景状态
+    field_2: str | None = None  # 所在区域
+    field_3: str | None = None  # 花卉品种
+    field_4: str | None = None  # 景观面积
+    field_5: str | None = None  # 花期起
+    field_6: str | None = None  # 花期止
+    field_7: str | None = None  # 上次换花日
 
 class PestEntry(BaseModel):
     """防治记录明细结构。"""
